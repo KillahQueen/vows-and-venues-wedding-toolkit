@@ -321,7 +321,9 @@ type Tool = {
   icon: LucideIcon;
   name: string;
   text?: string;
+  itemsHeader?: string;
   items?: { title: string; text: string }[];
+  note?: string;
 };
 
 const TOOLS: Tool[] = [

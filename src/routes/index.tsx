@@ -321,7 +321,9 @@ type Tool = {
   icon: LucideIcon;
   name: string;
   text?: string;
+  itemsHeader?: string;
   items?: { title: string; text: string }[];
+  note?: string;
 };
 
 const TOOLS: Tool[] = [
@@ -359,7 +361,26 @@ const TOOLS: Tool[] = [
   {
     icon: Wallet,
     name: "Wedding Budget Tracker",
-    text: "Log every deposit, payment and due date in one place. See at a glance what's paid, what's owed and what's left — and get warned before you overspend.",
+    itemsHeader: "What you'll see:",
+    items: [
+      {
+        title: "Total estimated",
+        text: "everything you expect to spend",
+      },
+      {
+        title: "Paid so far",
+        text: "all deposits and payments made",
+      },
+      {
+        title: "Balance due",
+        text: "what's still owed across all vendors",
+      },
+      {
+        title: "Remaining vs. target",
+        text: "how far you are from your budget, shown in red if you go over",
+      },
+    ],
+    note: "Works in any currency. Pick from every currency your device supports, from USD, EUR, and GBP to KES, NGN, INR, and JPY. All amounts are formatted with the right symbol for your choice.",
   },
   {
     icon: Armchair,
@@ -405,7 +426,7 @@ function ToolsGrid() {
               {tool.items ? (
                 <div className="mt-3">
                   <p className="text-xs font-semibold tracking-wide uppercase text-muted-foreground">
-                    What's inside:
+                    {tool.itemsHeader ?? "What's inside:"}
                   </p>
                   <ul className="mt-2 space-y-3">
                     {tool.items.map((item) => (
@@ -425,6 +446,11 @@ function ToolsGrid() {
                       </li>
                     ))}
                   </ul>
+                  {tool.note && (
+                    <p className="mt-4 border-t border-border pt-3 text-sm leading-relaxed text-muted-foreground">
+                      {tool.note}
+                    </p>
+                  )}
                 </div>
               ) : (
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">

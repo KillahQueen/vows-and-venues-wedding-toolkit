@@ -426,7 +426,7 @@ function ToolsGrid() {
               {tool.items ? (
                 <div className="mt-3">
                   <p className="text-xs font-semibold tracking-wide uppercase text-muted-foreground">
-                    What's inside:
+                    {tool.itemsHeader ?? "What's inside:"}
                   </p>
                   <ul className="mt-2 space-y-3">
                     {tool.items.map((item) => (
@@ -446,6 +446,11 @@ function ToolsGrid() {
                       </li>
                     ))}
                   </ul>
+                  {tool.note && (
+                    <p className="mt-4 border-t border-border pt-3 text-sm leading-relaxed text-muted-foreground">
+                      {tool.note}
+                    </p>
+                  )}
                 </div>
               ) : (
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">

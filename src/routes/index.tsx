@@ -141,7 +141,7 @@ function Hero() {
           </p>
           <h1 className="mt-6 font-display text-5xl leading-[1.05] font-medium tracking-tight text-balance sm:text-6xl lg:text-[4.25rem]">
             Plan the wedding of your dreams,{" "}
-            <em className="text-primary not-italic italic">without the overwhelm.</em>
+            <em className="text-primary italic">without the overwhelm.</em>
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
             The Complete Wedding Planning Toolkit gives you every tool a professional

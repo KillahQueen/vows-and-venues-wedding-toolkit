@@ -385,7 +385,7 @@ const TOOLS: Tool[] = [
   {
     icon: Armchair,
     name: "Wedding Seating Chart Planner",
-    text: "Lay out tables, place every guest, track couples and plus-ones, and solve the 'these two cannot sit together' puzzle with drag-and-drop simplicity.",
+    text: "Seating is the part of wedding planning that turns into a puzzle: who sits with whom, which table is full, and who still has no seat. The Wedding Seating Chart Planner keeps it simple. Add your guests, set up your tables, and seat everyone while the tool keeps count for you.",
   },
   {
     icon: ClipboardCheck,

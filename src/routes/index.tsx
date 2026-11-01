@@ -316,7 +316,14 @@ function SolutionSection() {
 /* Tools grid                                                        */
 /* ---------------------------------------------------------------- */
 
-const TOOLS = [
+type Tool = {
+  icon: LucideIcon;
+  name: string;
+  text?: string;
+  items?: { title: string; text: string }[];
+};
+
+const TOOLS: Tool[] = [
   {
     icon: Calculator,
     name: "Wedding Budget Estimator",

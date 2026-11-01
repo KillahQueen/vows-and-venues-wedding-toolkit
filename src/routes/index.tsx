@@ -377,11 +377,8 @@ const TOOLS: Tool[] = [
         title: "Remaining vs. target",
         text: "how far you are from your budget, shown in red if you go over",
       },
-      {
-        title: "Any currency",
-        text: "Works in any currency. Pick from every currency your device supports, from USD, EUR, and GBP to KES, NGN, INR, and JPY. All amounts are formatted with the right symbol for your choice.",
-      },
     ],
+    note: "Works in any currency. Pick from every currency your device supports, from USD, EUR, and GBP to KES, NGN, INR, and JPY. All amounts are formatted with the right symbol for your choice.",
   },
   {
     icon: Armchair,

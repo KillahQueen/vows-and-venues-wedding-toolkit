@@ -402,9 +402,35 @@ function ToolsGrid() {
                 <tool.icon className="size-5.5 text-primary transition-colors group-hover:text-primary-foreground" />
               </span>
               <h3 className="mt-5 font-display text-2xl font-semibold">{tool.name}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                {tool.text}
-              </p>
+              {tool.items ? (
+                <div className="mt-3">
+                  <p className="text-xs font-semibold tracking-wide uppercase text-muted-foreground">
+                    What's inside:
+                  </p>
+                  <ul className="mt-2 space-y-3">
+                    {tool.items.map((item) => (
+                      <li key={item.title} className="flex items-start gap-2.5">
+                        <span
+                          aria-hidden
+                          className="mt-0.5 shrink-0 font-semibold text-primary"
+                        >
+                          ✓
+                        </span>
+                        <span className="text-sm leading-relaxed text-muted-foreground">
+                          <span className="font-semibold text-foreground">
+                            {item.title}.
+                          </span>{" "}
+                          {item.text}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {tool.text}
+                </p>
+              )}
             </div>
           ))}
           <div className="flex flex-col items-start justify-center rounded-2xl bg-primary p-7 text-primary-foreground shadow-lg shadow-primary/20">

@@ -359,7 +359,29 @@ const TOOLS: Tool[] = [
   {
     icon: Wallet,
     name: "Wedding Budget Tracker",
-    text: "Log every deposit, payment and due date in one place. See at a glance what's paid, what's owed and what's left — and get warned before you overspend.",
+    itemsHeader: "What you'll see:",
+    items: [
+      {
+        title: "Total estimated",
+        text: "everything you expect to spend",
+      },
+      {
+        title: "Paid so far",
+        text: "all deposits and payments made",
+      },
+      {
+        title: "Balance due",
+        text: "what's still owed across all vendors",
+      },
+      {
+        title: "Remaining vs. target",
+        text: "how far you are from your budget, shown in red if you go over",
+      },
+      {
+        title: "Any currency",
+        text: "Works in any currency. Pick from every currency your device supports, from USD, EUR, and GBP to KES, NGN, INR, and JPY. All amounts are formatted with the right symbol for your choice.",
+      },
+    ],
   },
   {
     icon: Armchair,

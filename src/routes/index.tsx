@@ -325,7 +325,28 @@ const TOOLS = [
   {
     icon: CalendarDays,
     name: "Wedding Planner",
-    text: "A complete month-by-month planning timeline from 12 months out to the big day, with every task scheduled at exactly the right time — so nothing gets forgotten.",
+    items: [
+      {
+        title: "Checklist",
+        text: "A ready-made to-do list organized by time (12+ months out, 6 months, 1 month, and week-of), with a progress count. Add your own tasks to any section.",
+      },
+      {
+        title: "Guest List & RSVP Tracker",
+        text: "Add guests, mark them Yes, No, or Pending, and note meal choices. Live counts show how many are invited, attending, and still pending.",
+      },
+      {
+        title: "Day-of Itinerary",
+        text: "A wedding day timeline from hair and makeup to send-off, already filled in. Edit any time or event and it sorts itself in order.",
+      },
+      {
+        title: "Packing List",
+        text: "A starter list of essentials like rings, vows, and your marriage license, with a packed-so-far count. Add whatever else you need.",
+      },
+      {
+        title: "Gifts & Thank-Yous",
+        text: "Record who gave what and tick off each thank-you note as it goes out, so nobody gets forgotten.",
+      },
+    ],
   },
   {
     icon: Wallet,

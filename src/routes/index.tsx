@@ -17,6 +17,7 @@ import {
   Sparkles,
   Star,
   Wallet,
+  type LucideIcon,
 } from "lucide-react";
 
 import heroImage from "@/assets/hero-wedding-flatlay.jpg";
@@ -316,7 +317,14 @@ function SolutionSection() {
 /* Tools grid                                                        */
 /* ---------------------------------------------------------------- */
 
-const TOOLS = [
+type Tool = {
+  icon: LucideIcon;
+  name: string;
+  text?: string;
+  items?: { title: string; text: string }[];
+};
+
+const TOOLS: Tool[] = [
   {
     icon: Calculator,
     name: "Wedding Budget Estimator",
@@ -325,7 +333,28 @@ const TOOLS = [
   {
     icon: CalendarDays,
     name: "Wedding Planner",
-    text: "A complete month-by-month planning timeline from 12 months out to the big day, with every task scheduled at exactly the right time — so nothing gets forgotten.",
+    items: [
+      {
+        title: "Checklist",
+        text: "A ready-made to-do list organized by time (12+ months out, 6 months, 1 month, and week-of), with a progress count. Add your own tasks to any section.",
+      },
+      {
+        title: "Guest List & RSVP Tracker",
+        text: "Add guests, mark them Yes, No, or Pending, and note meal choices. Live counts show how many are invited, attending, and still pending.",
+      },
+      {
+        title: "Day-of Itinerary",
+        text: "A wedding day timeline from hair and makeup to send-off, already filled in. Edit any time or event and it sorts itself in order.",
+      },
+      {
+        title: "Packing List",
+        text: "A starter list of essentials like rings, vows, and your marriage license, with a packed-so-far count. Add whatever else you need.",
+      },
+      {
+        title: "Gifts & Thank-Yous",
+        text: "Record who gave what and tick off each thank-you note as it goes out, so nobody gets forgotten.",
+      },
+    ],
   },
   {
     icon: Wallet,
@@ -373,9 +402,35 @@ function ToolsGrid() {
                 <tool.icon className="size-5.5 text-primary transition-colors group-hover:text-primary-foreground" />
               </span>
               <h3 className="mt-5 font-display text-2xl font-semibold">{tool.name}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                {tool.text}
-              </p>
+              {tool.items ? (
+                <div className="mt-3">
+                  <p className="text-xs font-semibold tracking-wide uppercase text-muted-foreground">
+                    What's inside:
+                  </p>
+                  <ul className="mt-2 space-y-3">
+                    {tool.items.map((item) => (
+                      <li key={item.title} className="flex items-start gap-2.5">
+                        <span
+                          aria-hidden
+                          className="mt-0.5 shrink-0 font-semibold text-primary"
+                        >
+                          ✓
+                        </span>
+                        <span className="text-sm leading-relaxed text-muted-foreground">
+                          <span className="font-semibold text-foreground">
+                            {item.title}.
+                          </span>{" "}
+                          {item.text}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {tool.text}
+                </p>
+              )}
             </div>
           ))}
           <div className="flex flex-col items-start justify-center rounded-2xl bg-primary p-7 text-primary-foreground shadow-lg shadow-primary/20">

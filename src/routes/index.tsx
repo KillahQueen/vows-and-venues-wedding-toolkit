@@ -17,6 +17,7 @@ import {
   Sparkles,
   Star,
   Wallet,
+  type LucideIcon,
 } from "lucide-react";
 
 import heroImage from "@/assets/hero-wedding-flatlay.jpg";

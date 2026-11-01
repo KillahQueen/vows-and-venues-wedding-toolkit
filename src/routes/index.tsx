@@ -320,7 +320,7 @@ const TOOLS = [
   {
     icon: Calculator,
     name: "Wedding Budget Estimator",
-    text: "Answer a few quick questions about your guest count, location and style — and get a realistic budget broken down by every category, before you fall in love with something you can't afford.",
+    text: "Most couples start planning without any idea what a wedding actually costs. The Wedding Budget Estimator gives you a realistic starting number in under a minute, and shows exactly where that money should go.",
   },
   {
     icon: CalendarDays,

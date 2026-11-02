@@ -320,6 +320,7 @@ function SolutionSection() {
 type Tool = {
   icon: LucideIcon;
   name: string;
+  lead?: string;
   text?: string;
   itemsHeader?: string;
   items?: { title: string; text: string }[];
@@ -395,7 +396,8 @@ const TOOLS: Tool[] = [
   {
     icon: PenLine,
     name: "Invitation Wording Generator",
-    text: "Graceful, correct wording for every situation: hosted by both families, divorced parents, a deceased loved one, no-children weddings, casual or formal.",
+    lead: "Polished Wedding Invitation Wording in Minutes",
+    text: "Staring at a blank page, wondering how formal is too formal? The Invitation Wording Generator turns your wedding details into ready-to-use invitation text. Pick a style, fill in the details, and the wording updates as you type.",
   },
   {
     icon: Palette,
@@ -453,9 +455,20 @@ function ToolsGrid() {
                   )}
                 </div>
               ) : (
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {tool.text}
-                </p>
+                <>
+                  {tool.lead && (
+                    <p className="mt-3 text-sm font-semibold leading-relaxed text-foreground">
+                      {tool.lead}
+                    </p>
+                  )}
+                  <p
+                    className={`text-sm leading-relaxed text-muted-foreground ${
+                      tool.lead ? "mt-1.5" : "mt-3"
+                    }`}
+                  >
+                    {tool.text}
+                  </p>
+                </>
               )}
             </div>
           ))}

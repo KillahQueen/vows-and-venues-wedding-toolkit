@@ -320,6 +320,7 @@ function SolutionSection() {
 type Tool = {
   icon: LucideIcon;
   name: string;
+  lead?: string;
   text?: string;
   itemsHeader?: string;
   items?: { title: string; text: string }[];

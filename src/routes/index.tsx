@@ -461,7 +461,11 @@ function ToolsGrid() {
                       {tool.lead}
                     </p>
                   )}
-                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                  <p
+                    className={`text-sm leading-relaxed text-muted-foreground ${
+                      tool.lead ? "mt-1.5" : "mt-3"
+                    }`}
+                  >
                     {tool.text}
                   </p>
                 </>

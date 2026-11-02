@@ -390,7 +390,7 @@ const TOOLS: Tool[] = [
   {
     icon: ClipboardCheck,
     name: "Wedding Vendor Checklist",
-    text: "The exact questions to ask every venue, caterer, photographer, florist and DJ — plus the red flags to walk away from, so you hire with confidence.",
+    text: "Wedding vendors pile up fast: a photographer you emailed, a florist you only have a phone number for, a caterer who still hasn’t sent a contract. The Wedding Vendor Checklist keeps all of it in one simple list, so you always know who you’ve booked and who still needs a follow-up.",
   },
   {
     icon: PenLine,

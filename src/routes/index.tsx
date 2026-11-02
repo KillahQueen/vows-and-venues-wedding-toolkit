@@ -455,9 +455,16 @@ function ToolsGrid() {
                   )}
                 </div>
               ) : (
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {tool.text}
-                </p>
+                <>
+                  {tool.lead && (
+                    <p className="mt-3 text-sm font-semibold leading-relaxed text-foreground">
+                      {tool.lead}
+                    </p>
+                  )}
+                  <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
+                    {tool.text}
+                  </p>
+                </>
               )}
             </div>
           ))}

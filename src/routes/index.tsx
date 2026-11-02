@@ -28,7 +28,7 @@ import mockupImage from "@/assets/toolkit-bundle-mockup.jpg";
 /* EDIT ME: your Digistore24 checkout link and price                   */
 /* ------------------------------------------------------------------ */
 const CHECKOUT_URL = "https://www.checkout-ds24.com/product/757733";
-const PRICE = "$27";
+const PRICE = "$37";
 const REGULAR_PRICE = "$97";
 
 export const Route = createFileRoute("/")({
@@ -559,13 +559,13 @@ function HowItWorks() {
 /* ---------------------------------------------------------------- */
 
 const INCLUDED = [
-  { name: "Wedding Budget Estimator", value: "$27" },
-  { name: "Wedding Planner (12-month timeline)", value: "$27" },
-  { name: "Wedding Budget Tracker", value: "$27" },
-  { name: "Wedding Seating Chart Planner", value: "$27" },
-  { name: "Wedding Vendor Checklist", value: "$27" },
-  { name: "Invitation Wording Generator", value: "$27" },
-  { name: "Wedding Color Palette Generator", value: "$27" },
+  { name: "Wedding Budget Estimator", value: "$37" },
+  { name: "Wedding Planner (12-month timeline)", value: "$37" },
+  { name: "Wedding Budget Tracker", value: "$37" },
+  { name: "Wedding Seating Chart Planner", value: "$37" },
+  { name: "Wedding Vendor Checklist", value: "$37" },
+  { name: "Invitation Wording Generator", value: "$37" },
+  { name: "Wedding Color Palette Generator", value: "$37" },
 ];
 
 function OfferBox() {
@@ -597,7 +597,7 @@ function OfferBox() {
           </div>
           <div className="hero-glow bg-secondary/30 px-7 py-8 text-center">
             <p className="text-sm font-semibold tracking-[0.18em] text-muted-foreground uppercase">
-              Total value {INCLUDED.length * 27 > 0 ? `$${INCLUDED.length * 27}` : ""}
+              Total value {INCLUDED.length * 37 > 0 ? `$${INCLUDED.length * 37}` : ""}
             </p>
             <p className="mt-3 font-display text-4xl sm:text-5xl">
               <span className="text-muted-foreground line-through">{REGULAR_PRICE}</span>{" "}

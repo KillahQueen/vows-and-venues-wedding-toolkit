@@ -27,7 +27,7 @@ import mockupImage from "@/assets/toolkit-bundle-mockup.jpg";
 /* ------------------------------------------------------------------ */
 /* EDIT ME: your Digistore24 checkout link and price                   */
 /* ------------------------------------------------------------------ */
-const CHECKOUT_URL = "https://www.digistore24.com/product/YOUR-PRODUCT-ID";
+const CHECKOUT_URL = "https://www.checkout-ds24.com/product/757733";
 const PRICE = "$27";
 const REGULAR_PRICE = "$97";
 

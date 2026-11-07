@@ -40,7 +40,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "7 essential tools in one toolkit: wedding budget estimator, planner, budget tracker, seating chart planner, vendor checklist, invitation wording generator and color palette generator. Instant download, 60-day money-back guarantee.",
+          "Download seven wedding planning tools as an HTML file. Your information stays in the browser and on the device where you use it; it does not sync across devices or browsers. Clearing browser data erases it.",
       },
       {
         property: "og:title",
@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Budgets, timelines, seating, vendors, invitations and colors — everything you need to plan your wedding, in one instant-download toolkit.",
+          "Seven wedding planning tools in a downloadable HTML file. Your data stays in the browser and on the device where you use it.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -138,7 +138,7 @@ function Hero() {
         <div>
           <p className="inline-flex items-center gap-2 rounded-full border border-border bg-card px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-primary">
             <Sparkles className="size-3.5" />
-            7 essential tools — one instant download
+            7 essential tools — one HTML download
           </p>
           <h1 className="mt-6 font-display text-5xl leading-[1.05] font-medium tracking-tight text-balance sm:text-6xl lg:text-[4.25rem]">
             Plan the wedding of your dreams,{" "}
@@ -167,9 +167,14 @@ function Hero() {
             One-time payment · Instant download ·{" "}
             <span className="line-through">{REGULAR_PRICE}</span> {PRICE} today
           </p>
+          <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
+            Downloadable HTML file. Your information stays in the browser on the
+            device you use; it won’t transfer between devices or browsers. Clearing
+            browser data erases it.
+          </p>
           <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
             <span className="inline-flex items-center gap-2">
-              <Download className="size-4 text-primary" /> Instant access
+              <Download className="size-4 text-primary" /> HTML download
             </span>
             <span className="inline-flex items-center gap-2">
               <ShieldCheck className="size-4 text-primary" /> 60-day guarantee
@@ -284,7 +289,7 @@ function SolutionSection() {
             {[
               {
                 icon: MonitorSmartphone,
-                text: "Works on your phone, tablet and computer — no software to install, nothing to learn",
+                text: "Open the HTML download in a browser — no software installation needed",
               },
               {
                 icon: Download,
@@ -503,8 +508,8 @@ const STEPS = [
     text: `Check out securely through Digistore24 — one-time payment of ${PRICE}, no subscription, no upsells required.`,
   },
   {
-    title: "Open it on any device",
-    text: "Your download arrives by email immediately. Open it on your phone, tablet or laptop — everything syncs with your life, not against it.",
+    title: "Open the HTML file in a browser",
+    text: "Your download arrives by email immediately. Use it in the browser on the device where you plan. Information is saved only in that browser on that device; it does not transfer between phones, laptops, or different browsers. Clearing browser data erases it.",
   },
   {
     title: "Plan with confidence",
@@ -709,11 +714,11 @@ function Guarantee() {
 const FAQS = [
   {
     q: "What exactly do I get when I buy?",
-    a: "All seven tools: the wedding budget estimator, the 12-month wedding planner, the budget tracker, the seating chart planner, the vendor checklist, the invitation wording generator and the color palette generator. Everything is delivered as an instant digital download — nothing ships, nothing is back-ordered.",
+    a: "All seven tools: the wedding budget estimator, the 12-month wedding planner, the budget tracker, the seating chart planner, the vendor checklist, the invitation wording generator and the color palette generator. Everything is delivered as an instant HTML download — nothing ships, nothing is back-ordered.",
   },
   {
-    q: "Do I need to install any software?",
-    a: "No. Everything opens right on your phone, tablet or computer with nothing to install. If you can open a web page or a PDF, you can use the entire toolkit.",
+    q: "Is this an HTML download, and where is my information saved?",
+    a: "Yes. You receive a downloadable HTML file that opens in a browser, with no software installation needed. Information is saved only in that browser on that device; it will not carry over between phones, laptops, or different browsers. Clearing browser data erases it.",
   },
   {
     q: "We've already started planning. Is it too late for this?",

@@ -172,15 +172,15 @@ function Hero() {
             device you use; it won’t transfer between devices or browsers. Clearing
             browser data erases it.
           </p>
-          <div className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-muted-foreground">
+          <div className="mt-8 inline-flex max-w-full flex-wrap items-center justify-center gap-x-5 gap-y-3 rounded-full border border-border bg-card px-5 py-3 text-sm text-muted-foreground shadow-sm sm:justify-start">
             <span className="inline-flex items-center gap-2">
-              <Download className="size-4 text-primary" /> HTML download
+              <Lock className="size-4 text-primary" /> Secure checkout by Digistore24
             </span>
             <span className="inline-flex items-center gap-2">
-              <ShieldCheck className="size-4 text-primary" /> 60-day guarantee
+              <ShieldCheck className="size-4 text-primary" /> 60-day money-back guarantee
             </span>
             <span className="inline-flex items-center gap-2">
-              <Lock className="size-4 text-primary" /> Secure checkout via Digistore24
+              <Download className="size-4 text-primary" /> Instant HTML download
             </span>
           </div>
         </div>
@@ -815,6 +815,10 @@ function Footer() {
               The Wedding Planning Toolkit
             </span>
           </span>
+          <p className="inline-flex flex-wrap items-center justify-center gap-2 rounded-full border border-border bg-background px-4 py-2 text-xs font-semibold text-foreground">
+            <ShieldCheck className="size-4 text-primary" />
+            Secure checkout and 60-day guarantee via Digistore24
+          </p>
           <p className="max-w-2xl text-xs leading-relaxed text-muted-foreground">
             Secure checkout and the 60-day money-back guarantee are handled by
             Digistore24, our authorized retailer. Results and timelines described on

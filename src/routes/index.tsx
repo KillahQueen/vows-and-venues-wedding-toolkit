@@ -32,15 +32,6 @@ const PRICE = "$37";
 const REGULAR_PRICE = "$97";
 
 export const Route = createFileRoute("/")({
-  scripts: () => [
-    {
-      src: "https://www.digistore24-scripts.com/service/digistore.js",
-    },
-    {
-      children:
-        'digistorePromocode({ "product_id": 757733, "adjust_domain": true });',
-    },
-  ],
   head: () => ({
     meta: [
       {
@@ -62,6 +53,16 @@ export const Route = createFileRoute("/")({
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+    ],
+    scripts: [
+      {
+        src: "https://www.digistore24-scripts.com/service/digistore.js",
+      },
+      {
+        type: "text/javascript",
+        children:
+          'digistorePromocode({ "product_id": 757733, "adjust_domain": true });',
+      },
     ],
   }),
   component: SalesPage,

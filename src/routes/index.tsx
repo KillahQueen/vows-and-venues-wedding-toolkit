@@ -32,6 +32,15 @@ const PRICE = "$37";
 const REGULAR_PRICE = "$97";
 
 export const Route = createFileRoute("/")({
+  scripts: () => [
+    {
+      src: "https://www.digistore24-scripts.com/service/digistore.js",
+    },
+    {
+      children:
+        'digistorePromocode({ "product_id": 757733, "adjust_domain": true });',
+    },
+  ],
   head: () => ({
     meta: [
       {

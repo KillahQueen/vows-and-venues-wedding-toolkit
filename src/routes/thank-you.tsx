@@ -151,6 +151,14 @@ function ThankYouPage() {
           <p className="mt-3 text-center text-xs text-muted-foreground">
             © {new Date().getFullYear()} The Wedding Planning Toolkit. All rights reserved.
           </p>
+          <p className="mt-3 text-center">
+            <Link
+              to="/legal-information"
+              className="text-xs text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+            >
+              Legal Information
+            </Link>
+          </p>
         </div>
       </footer>
     </div>

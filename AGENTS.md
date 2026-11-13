@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+Public legal information is a standalone TanStack route with its own metadata and footer links from purchase-related pages, keeping disclosures directly accessible.

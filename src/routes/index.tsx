@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import {
   Armchair,
@@ -838,6 +838,12 @@ function Footer() {
           <p className="text-xs text-muted-foreground">
             © {new Date().getFullYear()} The Wedding Planning Toolkit. All rights reserved.
           </p>
+          <Link
+            to="/legal-information"
+            className="text-xs text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
+          >
+            Legal Information
+          </Link>
         </div>
       </div>
     </footer>

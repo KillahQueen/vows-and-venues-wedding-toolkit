@@ -619,7 +619,7 @@ function OfferBox() {
               <span className="text-primary">{PRICE}</span>
             </p>
             <p className="mt-2 text-sm text-muted-foreground">
-              One-time payment · Yours forever, including future updates
+              One-time payment · Instant HTML download
             </p>
             <CheckoutButton
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-10 py-4 text-base font-semibold text-primary-foreground shadow-lg shadow-primary/25 transition-all hover:-translate-y-0.5 hover:bg-primary/90 hover:shadow-xl"

@@ -29,7 +29,6 @@ import mockupImage from "@/assets/toolkit-bundle-mockup.jpg";
 /* ------------------------------------------------------------------ */
 const CHECKOUT_URL = "https://www.checkout-ds24.com/product/757733";
 const PRICE = "$37";
-const REGULAR_PRICE = "$97";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -174,8 +173,7 @@ function Hero() {
             </a>
           </div>
           <p className="mt-4 text-sm text-muted-foreground">
-            One-time payment · Instant download ·{" "}
-            <span className="line-through">{REGULAR_PRICE}</span> {PRICE} today
+            One-time payment · Instant download · {PRICE}
           </p>
           <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted-foreground">
             Downloadable HTML file. Your information stays in the browser on the
@@ -574,13 +572,13 @@ function HowItWorks() {
 /* ---------------------------------------------------------------- */
 
 const INCLUDED = [
-  { name: "Wedding Budget Estimator", value: "$37" },
-  { name: "Wedding Planner (12-month timeline)", value: "$37" },
-  { name: "Wedding Budget Tracker", value: "$37" },
-  { name: "Wedding Seating Chart Planner", value: "$37" },
-  { name: "Wedding Vendor Checklist", value: "$37" },
-  { name: "Invitation Wording Generator", value: "$37" },
-  { name: "Wedding Color Palette Generator", value: "$37" },
+  "Wedding Budget Estimator",
+  "Wedding Planner (12-month timeline)",
+  "Wedding Budget Tracker",
+  "Wedding Seating Chart Planner",
+  "Wedding Vendor Checklist",
+  "Invitation Wording Generator",
+  "Wedding Color Palette Generator",
 ];
 
 function OfferBox() {
@@ -593,31 +591,20 @@ function OfferBox() {
         />
         <div className="mt-12 overflow-hidden rounded-3xl border border-border bg-card shadow-xl shadow-primary/10">
           <div className="divide-y divide-border">
-            {INCLUDED.map((item) => (
-              <div
-                key={item.name}
-                className="flex items-center justify-between px-7 py-4"
-              >
-                <span className="flex items-center gap-3 font-medium">
-                  <span className="flex size-6 items-center justify-center rounded-full bg-secondary">
-                    <Heart className="size-3 fill-primary text-primary" />
-                  </span>
-                  {item.name}
+            {INCLUDED.map((name) => (
+              <div key={name} className="flex items-center gap-3 px-7 py-4 font-medium">
+                <span className="flex size-6 items-center justify-center rounded-full bg-secondary">
+                  <Heart className="size-3 fill-primary text-primary" />
                 </span>
-                <span className="font-display text-lg text-muted-foreground">
-                  {item.value} value
-                </span>
+                {name}
               </div>
             ))}
           </div>
           <div className="hero-glow bg-secondary/30 px-7 py-8 text-center">
             <p className="text-sm font-semibold tracking-[0.18em] text-muted-foreground uppercase">
-              Total value {INCLUDED.length * 37 > 0 ? `$${INCLUDED.length * 37}` : ""}
+              The entire toolkit
             </p>
-            <p className="mt-3 font-display text-4xl sm:text-5xl">
-              <span className="text-muted-foreground line-through">{REGULAR_PRICE}</span>{" "}
-              <span className="text-primary">{PRICE}</span>
-            </p>
+            <p className="mt-3 font-display text-4xl text-primary sm:text-5xl">{PRICE}</p>
             <p className="mt-2 text-sm text-muted-foreground">
               One-time payment · Instant HTML download
             </p>
